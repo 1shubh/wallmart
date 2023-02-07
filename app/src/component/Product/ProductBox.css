@@ -1,0 +1,23 @@
+#productBox{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+#productCard{
+    border: 0px solid black;
+    height:auto;
+   
+}
+#imageBox{
+    border: 0px solid blue;
+    height: 50%;
+}
+
+@media only screen and (max-width: 850px) and (min-width: 300px){
+    #productBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

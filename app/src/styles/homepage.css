@@ -1,0 +1,14 @@
+#homepage{
+    background-color: #e6f1fc;
+    width: 80%;
+    margin: auto;
+}
+#valentine{
+    border: 0px solid black;
+    padding: 20px;
+}
+@media only screen and (max-width: 850px) and (min-width: 300px){
+    #homepage{
+        margin-top: 250px;
+    }
+}

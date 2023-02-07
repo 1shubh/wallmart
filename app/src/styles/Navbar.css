@@ -1,0 +1,47 @@
+#navbar{
+    border: 0px solid blue;
+    margin: 0px;
+    padding: 0px;
+}
+#upNav{
+    border: 0px solid black;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+#logo{
+    border:0px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    cursor: pointer;
+}
+#logo:hover{
+    background-color: #004f9a;
+}
+#logoImage{
+    border: 0px solid black;
+    padding: 10px;
+}
+#downNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-family: Bogle, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 15px;
+}
+#footer{
+    background-color: #004f9a;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 850px) and (min-width: 300px){
+    #upNav{
+        justify-content:none;
+    }
+}

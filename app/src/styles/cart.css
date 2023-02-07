@@ -1,0 +1,19 @@
+#cart{
+    margin: auto;
+    margin-top: 200px;
+    border: 0px solid black;
+    width: 80%;
+}
+#cartComponent{
+          border: 0px solid black;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 30px;
+}
+@media only screen and (max-width: 850px) and (min-width: 300px){
+    #cartComponent{
+        display: grid;
+        border : 0px solid black;
+        gap:30px
+    }
+}

@@ -1,0 +1,17 @@
+#checkout{
+    margin-top: 200px;
+}
+#checoutComponent{
+    border: 0px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+@media only screen and (max-width: 850px) and (min-width: 300px){
+    #checoutComponent{
+        display: grid;
+        border : 0px solid black;
+        gap:30px
+    }
+}
