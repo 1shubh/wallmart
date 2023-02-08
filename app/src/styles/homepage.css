@@ -1,6 +1,6 @@
 #homepage{
     background-color: #e6f1fc;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 #valentine{
@@ -9,6 +9,7 @@
 }
 @media only screen and (max-width: 850px) and (min-width: 300px){
     #homepage{
-        margin-top: 250px;
+        margin-top:60px;
+        width: 100%;
     }
 }

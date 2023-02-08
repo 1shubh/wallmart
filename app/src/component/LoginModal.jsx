@@ -23,7 +23,7 @@ export default function SignInModal(){
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-
+    // const token = localStorage.getItem("token");
     const isAuthenticated = useSelector(
         (state) => state.auth.data.isAuthenticated
       );
@@ -44,7 +44,7 @@ export default function SignInModal(){
           border={"0px solid white"}
           color="white"
           justifyContent={"space-around"}
-          w="7%"
+          w={{lg:"40%",md:"50%",base:"4%"}}
           borderRadius="20px"
           padding={"5px"}
           _hover={{ backgroundColor: "#004f9a" }}
@@ -59,7 +59,7 @@ export default function SignInModal(){
               fontSize={"16px"}
               fontFamily="Bogle,Helvetica Neue, Helvetica, Arial, sans-serif"
             >
-              Account
+              {isAuthenticated ? "Shubham K" : "Account"}
             </Text>
           </Box>
         </Box> 

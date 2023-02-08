@@ -13,8 +13,8 @@ import {
     Box,
     // Flex
   } from '@chakra-ui/react'
-  import {Link} from "react-router-dom"
-//   import { useNavigate } from 'react-router-dom'
+  // import {Link} from "react-router-dom"
+  import { useNavigate } from 'react-router-dom'
   import {CgCheckR} from "react-icons/cg"
   
  
@@ -22,7 +22,7 @@ import {
 
 export const OrderModal = ({payment,amount,totalItem,name}) => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const OverlayOne = () => (
         <ModalOverlay
@@ -42,6 +42,11 @@ export const OrderModal = ({payment,amount,totalItem,name}) => {
     
       const { isOpen, onOpen, onClose } = useDisclosure()
       const [overlay, setOverlay] = useState(<OverlayOne/>)
+
+     const handleClick = () => {
+         localStorage.removeItem("cart")
+         navigate("/")
+     }
      
   return (
     <div>
@@ -69,7 +74,7 @@ export const OrderModal = ({payment,amount,totalItem,name}) => {
                 </Box>
             </ModalBody>
             <ModalFooter>
-              <Link to="/"><Button onClick={localStorage.removeItem("cart")} backgroundColor="white" color={"#0a438b"}>Close</Button></Link>
+             <Button onClick={handleClick} backgroundColor="white" color={"#0a438b"}>Close</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

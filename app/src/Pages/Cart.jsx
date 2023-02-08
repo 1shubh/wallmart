@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import "../styles/cart.css";
 import { ADD_TO_CART } from "../redux/cart/cartActionType";
 import { deleteItem } from "../redux/cart/cartAction";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { Navigate } from "react-router-dom";
 
 export const Cart = () => {
@@ -17,6 +17,7 @@ export const Cart = () => {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const cartItem = useSelector((state) => state.cartManager);
   console.log(cartItem.cart);
@@ -128,11 +129,10 @@ export const Cart = () => {
           backgroundColor={"white"}
           // position={"fixed"}
           // marginLeft="52rem"
-        >
-          <Link to={"checkout"}>
-          <Button colorScheme={"blue"} w="100%" disabled={totalitem === 0}>
-            Contiue To Checkout
-          </Button></Link>
+        > 
+          <Button colorScheme={"blue"} isDisabled={totalitem===0} w="100%" onClick={()=>navigate("checkout")}>
+            {totalitem===0 ? "Add Item to Cart" : "Continue to Checkout"}
+          </Button>
           <Box display="flex" justifyContent={"space-between"}>
             <Text fontWeight={"bold"}>Subtotal ({totalitem} Items)</Text>
             <Text>{`$${amount}.00`}</Text>

@@ -11,6 +11,9 @@
           margin-top: 30px;
 }
 @media only screen and (max-width: 850px) and (min-width: 300px){
+    #cart{
+        margin-top: 60px;
+    }
     #cartComponent{
         display: grid;
         border : 0px solid black;

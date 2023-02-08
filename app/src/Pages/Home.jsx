@@ -68,10 +68,11 @@ let gameDay = [
     name:"Shop All"
   },
 ]
+
 export const Home = () => {
   return (
     <div id="homepage">
-      <Box margin="auto" backgroundColor={"white"} marginTop={{lg:"150px"}}>
+      <Box margin="auto" border={"0px solid blue"} backgroundColor={"white"} marginTop={{lg:"150px",md:"200px"}}>
         <Box
           display={"grid"}
           gridTemplateColumns={{
@@ -204,6 +205,8 @@ export const Home = () => {
         <Heading size={"md"} padding="20px">Get ready for game day</Heading>
         <Box
         display={{lg:"flex",md:"flex",base:"grid"}}
+        gridTemplateColumns={"repeat(2,1fr)"}
+        gap="30px"
         justifyContent="space-around"
         >
           {

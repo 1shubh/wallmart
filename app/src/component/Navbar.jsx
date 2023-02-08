@@ -42,15 +42,15 @@ export const Navbar = () => {
   return (
     <div id="navbar" style={{ backgroundColor: "#0071dc",position:"fixed",zIndex:"1" ,width:"100%", margin:"0px"}} >
       <div id="upNav">
+      <Link to={"/"}>
         <div id="logo">
-          <Link to={"/"}>
           <img
             id="logoImage"
             width={"100%"}
             src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg"
             alt="logo"
-          /></Link>
-        </div>
+          />
+        </div></Link>
         <Button
           borderRadius={"30px"}
           size={{lg:"md",md:"sm",base:"xs"}}

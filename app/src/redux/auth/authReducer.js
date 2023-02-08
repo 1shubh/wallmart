@@ -6,6 +6,7 @@ import {
   } from "./authActionType";
   
   const token = localStorage.getItem("token");
+
   const authInitalState = {
     loading: false,
     data: {
